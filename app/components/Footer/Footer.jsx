@@ -33,8 +33,14 @@ const Footer = () => {
             className="flex items-center justify-center gap-2 mb-2 cursor-pointer hover:animate-pulse"
             key={text}
           >
-            <Image src={svg} alt="Send me email icon" width={20} height={20} />
-            <Link className="font-bold" href={href}>
+            <Image src={svg} alt={`${text} icon`} width={20} height={20} />
+            <Link
+              className="font-bold"
+              href={href}
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label={`Visit ${text}`}
+            >
               {text}
             </Link>
           </div>
