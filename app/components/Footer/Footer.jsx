@@ -2,9 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { currentYear } from "@/app/helpers/functions";
-import Email from "../../../public/Email.svg";
-import GitHub from "../../../public/GitHub.svg";
-import LinkedIn from "../../../public/LinkedIn.svg";
+import { Email, GitHub, LinkedIn } from "../../../public/svg";
 
 const Footer = () => {
   const socialLinks = [
