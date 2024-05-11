@@ -28,19 +28,14 @@ const Footer = () => {
       <h2 className="uppercase text-6xl font-black mb-10">Contact</h2>
 
       <div className="mb-6">
-        {socialLinks.map((item) => (
+        {socialLinks.map(({ text, svg, href }) => (
           <div
             className="flex items-center justify-center gap-2 mb-2 cursor-pointer hover:animate-pulse"
-            key={item.text}
+            key={text}
           >
-            <Image
-              src={item.svg}
-              alt="Send me email icon"
-              width={20}
-              height={20}
-            />
-            <Link className="font-bold" href={item.href}>
-              {item.text}
+            <Image src={svg} alt="Send me email icon" width={20} height={20} />
+            <Link className="font-bold" href={href}>
+              {text}
             </Link>
           </div>
         ))}
