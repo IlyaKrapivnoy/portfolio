@@ -27,7 +27,13 @@ const SocialLinks = ({
             )}
           >
             <Image src={svg} alt={`${text} icon`} width={20} height={20} />
-            <span className={cn({ hidden: !iconWithText })}>{text}</span>
+            <span
+              className={cn("text-[14px] lg:text-[16px]", {
+                hidden: !iconWithText,
+              })}
+            >
+              {text}
+            </span>
           </div>
         </Link>
       ))}

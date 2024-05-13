@@ -1,6 +1,14 @@
 .animation {
   font-size: 40px;
   cursor: pointer;
+
+  @media (max-width: 992px) {
+    font-size: 30px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 24px;
+  }
 }
 
 .animation span {
