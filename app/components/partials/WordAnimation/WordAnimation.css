@@ -1,0 +1,85 @@
+.animation {
+  font-size: 40px;
+  cursor: pointer;
+
+  @media (max-width: 992px) {
+    font-size: 30px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 24px;
+  }
+}
+
+.animation span {
+  display: inline-block;
+  position: relative;
+  padding: 12px 0;
+}
+
+.animation span.animate {
+  animation: bounce 1.5s ease-in-out;
+  animation-iteration-count: 1;
+}
+
+.animation span:nth-child(2n).animate {
+  animation: bounce2 1.5s ease-in-out;
+}
+
+.animation span:nth-child(3n).animate {
+  animation: bounce3 1.5s ease-in-out;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-24px) rotate(30deg);
+  }
+  70% {
+    transform: translateY(14.4px) rotate(-5deg);
+  }
+  90% {
+    transform: translateY(-4.8px) rotate(2deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+
+@keyframes bounce2 {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-24px) rotate(-10deg);
+  }
+  70% {
+    transform: translateY(14.4px) rotate(30deg);
+  }
+  90% {
+    transform: translateY(-4.8px) rotate(-10deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+
+@keyframes bounce3 {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  60% {
+    transform: translateY(-48px) rotate(60deg);
+  }
+  80% {
+    transform: translateY(24px) rotate(-20deg);
+  }
+  90% {
+    transform: translateY(-9.6px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}

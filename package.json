@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ramonak/react-progress-bar": "^5.2.0",
+    "classnames": "^2.5.1",
     "next": "14.2.3",
     "prettier": "^3.2.5",
     "react": "^18",
