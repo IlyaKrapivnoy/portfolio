@@ -1,4 +1,6 @@
 import React from "react";
+import SocialLinks from "@/app/components/partials/SocialLinks/SocialLinks";
+import { socialLinks } from "@/app/data/socialLinks";
 
 const Header = () => {
   return (
@@ -11,7 +13,9 @@ const Header = () => {
           <li>projects</li>
         </ul>
       </div>
-      <div>links</div>
+      <div>
+        <SocialLinks arr={socialLinks} horizontalDisplay />
+      </div>
     </div>
   );
 };

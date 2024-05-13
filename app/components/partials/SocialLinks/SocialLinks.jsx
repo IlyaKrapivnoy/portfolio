@@ -1,10 +1,16 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import cn from "classnames";
 
-const SocialLinks = ({ arr, sectionStyles }) => {
+const SocialLinks = ({
+  arr = [],
+  sectionStyles = "",
+  iconWithText = false,
+  horizontalDisplay = false,
+}) => {
   return (
-    <div className={sectionStyles}>
+    <div className={cn(sectionStyles, { "flex gap-3": horizontalDisplay })}>
       {arr.map(({ text, svg, href }) => (
         <Link
           key={text}
@@ -16,7 +22,7 @@ const SocialLinks = ({ arr, sectionStyles }) => {
         >
           <div className="flex items-center justify-center font-bold gap-2 mb-2 hover:animate-pulse">
             <Image src={svg} alt={`${text} icon`} width={20} height={20} />
-            <span>{text}</span>
+            <span className={cn({ hidden: !iconWithText })}>{text}</span>
           </div>
         </Link>
       ))}
