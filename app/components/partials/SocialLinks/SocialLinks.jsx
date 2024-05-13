@@ -10,7 +10,7 @@ const SocialLinks = ({
   horizontalDisplay = false,
 }) => {
   return (
-    <div className={cn(sectionStyles, { "flex gap-3": horizontalDisplay })}>
+    <div className={cn(sectionStyles, { "flex gap-6": horizontalDisplay })}>
       {arr.map(({ text, svg, href }) => (
         <Link
           key={text}
@@ -20,7 +20,12 @@ const SocialLinks = ({
           aria-label={`Visit ${text}`}
           passHref
         >
-          <div className="flex items-center justify-center font-bold gap-2 mb-2 hover:animate-pulse">
+          <div
+            className={cn(
+              "flex items-center justify-center font-bold gap-2  hover:animate-pulse",
+              { "mb-2": !horizontalDisplay },
+            )}
+          >
             <Image src={svg} alt={`${text} icon`} width={20} height={20} />
             <span className={cn({ hidden: !iconWithText })}>{text}</span>
           </div>

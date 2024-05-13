@@ -9,15 +9,15 @@ const Header = () => {
       <div className="container">
         <div className="flex justify-between items-center z-50 w-full py-4">
           <div className="text-4xl font-black">
-            <Link href="https://github.com/IlyaKrapivnoy">Krapivnoy</Link>
+            <Link
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://github.com/IlyaKrapivnoy"
+            >
+              Krapivnoy
+            </Link>
           </div>
-          <div>
-            <ul className="flex gap-10">
-              <li>about</li>
-              <li>stack</li>
-              <li>projects</li>
-            </ul>
-          </div>
+
           <div>
             <SocialLinks arr={socialLinks} horizontalDisplay />
           </div>
