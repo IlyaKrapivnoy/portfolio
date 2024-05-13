@@ -1,4 +1,4 @@
-import { Email, GitHub, LinkedIn } from "@/public/svg";
+import { GitHub, LinkedIn } from "@/public/svg";
 
 export const socialLinks = [
   {
