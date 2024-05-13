@@ -2,6 +2,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Footer from "@/app/components/main/Footer/Footer";
 import Header from "@/app/components/main/Header/Header";
+import { Fragment } from "react";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -18,7 +19,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={montserrat.className}>
         <Header />
-        {children}
+        <div className="pb-[120px]">{children}</div>
         <Footer />
       </body>
     </html>

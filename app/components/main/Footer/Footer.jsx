@@ -1,26 +1,32 @@
 import React from "react";
 import { currentYear } from "@/app/helpers/functions";
-import { Email, GitHub, LinkedIn } from "../../../../public/svg";
 import SocialLinks from "@/app/components/partials/SocialLinks/SocialLinks";
 import { socialLinks } from "@/app/data/socialLinks";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col text-center border-t-[1px] border-white py-16">
-      <h2 className="uppercase text-6xl font-black mb-10">Contact</h2>
+    <div className="relative md:fixed max-w-inherit w-full bottom-0 border-t-[1px] border-white bg-[rgb(var(--background-end-rgb))]">
+      <div className="container">
+        <footer className="flex flex-col md:flex-row md:justify-between text-center py-16 md:py-4">
+          <h2 className="uppercase text-4xl font-black mb-10 md:mb-0">
+            Contacts
+          </h2>
 
-      <SocialLinks arr={socialLinks} iconWithText sectionStyles="mb-6" />
+          <SocialLinks
+            arr={socialLinks}
+            iconWithText
+            sectionStyles="mb-6 md:mb-0"
+          />
 
-      <div className="font-bold mb-10">ilya.krapivnoy@gmail.com</div>
-
-      <div className="font-mono opacity-50 mb-6 text-green-400">
-        &#39;I create programs as much as programs create me&#39;
+          <div className="text-center">
+            <p className="font-bold mb-2">ilya.krapivnoy@gmail.com</p>
+            <p className="font-extralight opacity-60 cursor-default">
+              {currentYear} All rights reserved
+            </p>
+          </div>
+        </footer>
       </div>
-
-      <p className="font-extralight opacity-60">
-        {currentYear} All rights reserved
-      </p>
-    </footer>
+    </div>
   );
 };
 
