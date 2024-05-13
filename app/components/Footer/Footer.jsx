@@ -29,21 +29,19 @@ const Footer = () => {
 
       <div className="mb-6">
         {socialLinks.map(({ text, svg, href }) => (
-          <div
-            className="flex items-center justify-center gap-2 mb-2 cursor-pointer hover:animate-pulse"
+          <Link
             key={text}
+            href={href}
+            rel="noopener noreferrer"
+            target="_blank"
+            aria-label={`Visit ${text}`}
+            passHref
           >
-            <Image src={svg} alt={`${text} icon`} width={20} height={20} />
-            <Link
-              className="font-bold"
-              href={href}
-              rel="noopener noreferrer"
-              target="_blank"
-              aria-label={`Visit ${text}`}
-            >
-              {text}
-            </Link>
-          </div>
+            <div className="flex items-center justify-center font-bold gap-2 mb-2 hover:animate-pulse">
+              <Image src={svg} alt={`${text} icon`} width={20} height={20} />
+              <span>{text}</span>
+            </div>
+          </Link>
         ))}
       </div>
 
