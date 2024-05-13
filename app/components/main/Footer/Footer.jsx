@@ -1,7 +1,9 @@
+"use client";
 import React from "react";
 import { currentYear } from "@/app/helpers/functions";
 import SocialLinks from "@/app/components/partials/SocialLinks/SocialLinks";
 import { socialLinks } from "@/app/data/socialLinks";
+import WordAnimation from "@/app/components/partials/WordAnimation/WordAnimation";
 
 const Footer = () => {
   return (
@@ -9,7 +11,7 @@ const Footer = () => {
       <div className="container">
         <footer className="flex flex-col md:flex-row md:justify-between text-center py-16 md:py-4">
           <h2 className="uppercase text-4xl font-black mb-10 md:mb-0">
-            Contacts
+            <WordAnimation word="Contacts" />
           </h2>
 
           <SocialLinks
