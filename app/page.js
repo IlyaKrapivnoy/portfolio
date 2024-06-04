@@ -9,7 +9,7 @@ import { arrListOne, arrListTwo } from "@/app/data/lists";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-12 lg:p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between px-6 md:px-12 lg:px-24">
       content
       <TextSection
         title="I'M A FRONT-END DEVELOPER WITH 4+ YEARS OF EXPERIENCE"
@@ -32,7 +32,7 @@ export default function Home() {
         title="STACK"
         text="Below, I've listed the main technologies I work with. The actual list of technologies is constantly expanding because I'm always learning something new."
       >
-        <div className="flex text-center gap-40">
+        <div className="flex text-center gap-20 lg:gap-40">
           <List arr={arrListOne} />
           <List arr={arrListTwo} />
         </div>
