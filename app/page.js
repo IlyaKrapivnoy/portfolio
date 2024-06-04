@@ -25,6 +25,11 @@ export default function Home() {
         text="Looking to boost your business with a catchy landing page, or perhaps craft a web app that not only looks good but also brings in revenue? I'm here to lend a hand!
                 Just shoot me an email detailing your vision, and I'll provide you with an estimate, outline the technical requirements, offer some handy advice on bringing your idea to life."
       />
+      <TextSection
+        column
+        title="STACK"
+        text="Below, I've listed the main technologies I work with. The actual list of technologies is constantly expanding because I'm always learning something new."
+      />
       <ScrollToTop
         style={{
           background: "none",
