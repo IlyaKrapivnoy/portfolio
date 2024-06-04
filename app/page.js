@@ -11,7 +11,7 @@ import FeatureSection from "@/app/components/sections/FeatureSection/FeatureSect
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
-      <div className="px-6 md:px-12 lg:px-24">
+      <div className="container">
         content
         <TextSection
           title="I'M A FRONT-END DEVELOPER WITH 4+ YEARS OF EXPERIENCE"
@@ -27,7 +27,7 @@ export default function Home() {
 
       <FeatureSection />
 
-      <div className="px-6 md:px-12 lg:px-24">
+      <div className="container">
         <TextSection
           reversed
           title="I CAN TURN YOUR IDEAS INTO WEBSITE"
