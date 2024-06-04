@@ -1,6 +1,6 @@
 import React from "react";
 
-const TextSection = ({ column, reversed, title, text }) => {
+const TextSection = ({ children, column, reversed, title, text }) => {
   return (
     <div
       className={`flex justify-between flex-col lg:flex-row ${reversed ? "lg:flex-row-reverse" : ""} ${column ? "lg:flex-col items-center" : ""}  gap-10 py-20`}
@@ -15,6 +15,7 @@ const TextSection = ({ column, reversed, title, text }) => {
       >
         {text}
       </div>
+      <div>{children}</div>
     </div>
   );
 };

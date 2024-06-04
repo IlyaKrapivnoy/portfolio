@@ -4,6 +4,8 @@ import ScrollToTop from "react-scroll-to-top";
 import Image from "next/image";
 import { Up } from "@/public/svg";
 import TextSection from "@/app/components/sections/TextSection/TextSection";
+import List from "@/app/components/partials/List/List";
+import { arrListOne, arrListTwo } from "@/app/data/lists";
 
 export default function Home() {
   return (
@@ -29,7 +31,12 @@ export default function Home() {
         column
         title="STACK"
         text="Below, I've listed the main technologies I work with. The actual list of technologies is constantly expanding because I'm always learning something new."
-      />
+      >
+        <div className="flex text-center gap-40">
+          <List arr={arrListOne} />
+          <List arr={arrListTwo} />
+        </div>
+      </TextSection>
       <ScrollToTop
         style={{
           background: "none",
