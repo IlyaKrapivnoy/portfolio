@@ -6,3 +6,9 @@ export const arrListOne = [
   "TailwindCSS / MaterialUI",
 ];
 export const arrListTwo = ["TypeScript", "Vue", "Nuxt.js", "VueX", "JEST"];
+
+export const bgImgList = [
+  "DEADLINE-ORIENTED",
+  "EFFECTIVE COMMUNICATION",
+  "STRONG PROBLEM-SOLVING SKILLS",
+];
